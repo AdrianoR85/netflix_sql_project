@@ -4,21 +4,26 @@
 
 This project consists of a data analysis of the Netflix catalog using PostgreSQL. The objective is to solve 15 specific business problems through SQL queries that explore different aspects of the content available on the platform.
 
-## Database Structure
-
-The database contains information about Netflix movies and TV shows, including:
-- Content type (movie or TV show)
-- Title
-- Director
-- Cast
-- Country of production
-- Date added to the platform
-- Release year
-- Rating
-- Duration
-- Genres
-- Description
-
+## Schemas of Netflix
+```sql
+DROP TABLE IF EXISTS netflix;
+CREATE TABLE netflix
+(
+	show_id	VARCHAR(5),
+	type    VARCHAR(10),
+	title	VARCHAR(250),
+	director VARCHAR(550),
+	casts	VARCHAR(1050),
+	country	VARCHAR(550),
+	date_added	VARCHAR(55),
+	release_year	INT,
+	rating	VARCHAR(15),
+	duration	VARCHAR(15),
+	listed_in	VARCHAR(250),
+	description VARCHAR(550)
+);
+SELECT * FROM netflix;
+```
 ## Business Problems Solved
 
 1. **Count the number of Movies vs TV Shows**
